@@ -18,8 +18,8 @@ namespace Dekodolo2
             while (!sr.EndOfStream)
             {
                 char b = char.Parse(sr.ReadLine());
-                bool[,] m = new bool[4, 7];
-                for (int s = 0; s < 4; s++)
+                bool[,] m = new bool[7, 4];
+                for (int s = 0; s < 7; s++)
                 {
                     string sor = sr.ReadLine();
                     for (int o = 0; o < sor.Length; o++)
