@@ -29,6 +29,18 @@ namespace Dekodolo2
                 }
                 karakterek.Add(new Karakter(b, m));
             }
+
+            Console.WriteLine("5.Feladat:");
+            Console.WriteLine($"Karakterek száma: {karakterek.Count}");
+
+            Console.WriteLine("6.Feladat:");
+            char input = '\0';
+            bool result = false;
+            do
+            {
+                Console.WriteLine("Karakter input: ");
+                result = char.TryParse(Console.ReadLine(), out input);
+            } while (!result && (input < 65 || input > 90));
         }
     }
 }
