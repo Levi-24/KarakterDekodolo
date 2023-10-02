@@ -24,7 +24,7 @@ namespace Dekodolo2
                     string sor = sr.ReadLine();
                     for (int o = 0; o < sor.Length; o++)
                     {
-                        m[s, o] = sor[o] == '1' ? true : false;
+                        m[s, o] = sor[o] == '1';
                     }
                 }
                 karakterek.Add(new Karakter(b, m));
@@ -40,7 +40,7 @@ namespace Dekodolo2
             {
                 Console.WriteLine("Karakter input: ");
                 result = char.TryParse(Console.ReadLine(), out input);
-            } while (!result && (input < 65 || input > 90));
+            } while (!result || input < 65 || input > 90);
         }
     }
 }
