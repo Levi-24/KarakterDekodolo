@@ -28,6 +28,16 @@ namespace Dekodolo2
             var megj = bank.SingleOrDefault(k => k.Betu == input);
             if (megj is not null) Console.WriteLine(megj.Kirajzol());
             else Console.WriteLine("Nincsen a karakter a bankban!");
+
+            var dekodolando = Beolvas(@"..\..\..\src\dekodol.txt");
+
+            Console.WriteLine("9.Feladat: Dekódolás");
+            foreach (var dekk in dekodolando)
+            {
+                var bankk = bank.SingleOrDefault(k => k.Felismer(dekk));
+                Console.Write(bankk is null ? "?" : bankk.Betu);
+            }
+            Console.WriteLine();
         }
 
         static List<Karakter> Beolvas(string eleresiUt)
